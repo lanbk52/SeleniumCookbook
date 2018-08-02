@@ -14,9 +14,9 @@ import javax.print.attribute.TextSyntax;
 
 public class GoogleSearchTest {
 	private WebDriver driver;
-
 	@Before
 	public void setUp() {
+		System.setProperty("webdriver.gecko.driver", "..\\..\\geckodriver.exe");
 		// Launch a new Firefox instance
 		driver = new FirefoxDriver();
 		// Maximize the browser window
@@ -43,7 +43,7 @@ public class GoogleSearchTest {
 			}
 		});
 		
-		System.out.println(driver.getTitle());
+		assertEquals("Selenium testing tools cookbook - Tìm với Google",driver.getTitle());
 	}
 
 	@After
