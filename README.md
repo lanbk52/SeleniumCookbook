@@ -1,1 +1,1 @@
-# SeleniumCookbook
+# SeleniumCookbook project
